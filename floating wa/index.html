@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating wa</title>
+    <style>
+       a.button_whatsapp.show {
+            display: block;
+            background: #25D366 url(assets/wa_white.svg) center center no-repeat!important;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 99;
+        }
+
+        a.button_whatsapp.show.change {
+            display: block;
+            background: #25D366 url(assets/close.png) center center no-repeat!important;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 99;
+        }
+
+        a.wa {
+            display: block;
+            background: #25D366 url(assets/wa_white.svg) center center no-repeat!important;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 5px;
+        }
+        .allWa{
+            display: none;
+            position: fixed;
+            right: 16px;
+            bottom: 70px;
+            z-index: 99;
+        }
+
+        .label-wa1 {
+            color: #000000 !important;
+            position: fixed;
+            background: #ffffff;
+            padding: 0 5px;
+            border-radius: 4px;
+            border: 1px solid grey;
+            right: 67px;
+            bottom: 177px;
+            font-size: small;
+            z-index: 99;
+        }
+
+        .label-wa2 {
+            color: #000000 !important;
+            position: fixed;
+            background: #ffffff;
+            padding: 0 5px;
+            border-radius: 4px;
+            border: 1px solid grey;
+            right: 67px;
+            bottom: 132px;
+            font-size: small;
+            z-index: 99;
+        }
+
+        .label-wa3 {
+            color: #000000 !important;
+            position: fixed;
+            background: #ffffff;
+            padding: 0 5px;
+            border-radius: 4px;
+            border: 1px solid grey;
+            right: 67px;
+            bottom: 85px;
+            font-size: small;
+            z-index: 99;
+        }
+
+    </style>
+</head>
+<body>
+    <a target="_blank" title="" class="button_whatsapp show" rel="noopener noreferrer"></a>
+    <div class="allWa nobr" style="display: none;">
+        <a href="https://wa.me/62811111111?text=Hello... saya dari Pulau Jawa ingin bertanya..." target="_blank" title="Pulau Jawa" class="wa" rel="noopener noreferrer"></a>
+        <a href="https://wa.me/6281111111111?text=Hello... saya dari pulau kalimantan ingin bertanya..." target="_blank" title="Pulau Kalimantan" class="wa" rel="noopener noreferrer"></a>
+        <a href="https://wa.me/62811111111111?text=Hello%20... saya dari pulau Sumatra ingin bertanya..." target="_blank" title="Pulau sumatra" class="wa" rel="noopener noreferrer"></a>
+        
+        <label class="label-wa1">Pulau Jawa</label>
+        <label class="label-wa2">Pulau Kalimantan</label>
+        <label class="label-wa3">Pulau Sumatra</label>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
+    <script>
+        
+        jQuery('.button_whatsapp.show').click( function(){
+        jQuery('.allWa').toggle();
+        jQuery('a.button_whatsapp.show').toggleClass('change');
+        });
+
+        jQuery('.wa1 ').hover( function(){
+        jQuery('.label-wa1').css('display','block');
+        });
+
+        jQuery('.wa2 ').hover( function(){
+        jQuery('.label-wa2').css('display','block');
+        });
+
+        jQuery('.wa3 ').hover( function(){
+        jQuery('.label-wa3').css('display','block');
+        });
+    </script>
+</body>
+</html>
