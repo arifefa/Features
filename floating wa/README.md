@@ -1,3 +1,0 @@
-# Floating wa
-need jquery
-
